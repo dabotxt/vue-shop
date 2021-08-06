@@ -5,7 +5,7 @@
     <Son :msg="fathermsg" v-on:smsg="smsgs"></Son>
   </div> 
 </template>
- 
+
 <script>
 import Son from './son.vue'
 export default {
@@ -20,7 +20,7 @@ export default {
   },
   methods:{
     smsgs(e){
-      console.log(e)
+      this.fathermsg == e
     }
   }
 }
