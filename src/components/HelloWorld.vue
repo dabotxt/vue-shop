@@ -5,7 +5,7 @@
     <Son :msg="fathermsg" v-on:smsg="smsgs"></Son>
     <Bor></Bor>
   </div> 
-</template> 
+</template>  
 
 <script>
 import Son from './son.vue'
