@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
       <h2>
           兄弟组件
       </h2>
