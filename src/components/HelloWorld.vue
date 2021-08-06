@@ -3,7 +3,7 @@
     <h2>父组件的值:{{fathermsg}}</h2>
     <input type="text" v-model="fathermsg">
     <Son :msg="fathermsg" v-on:smsg="smsgs"></Son>
-  </div>
+  </div> 
 </template>
 
 <script>
