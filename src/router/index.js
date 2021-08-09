@@ -2,13 +2,27 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login'
 import Home from '../components/home'
+import Welcome from '../components/welcome'
+import Users from '../components/user/users'
+import Father from '../components/father'
+import Fuzujian from '../components/fuzujian'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
     { path: '/', redirect: '/login' },
-    { path: '/login', component: Login},
-    { path: '/home', component: Home}
+    { path: '/login', component: Login, name: 'login'},
+    { 
+      path: '/home',
+      component: Home,
+      redirect: '/welcome',
+      children: [
+        { path: '/welcome', component: Welcome, name: 'welcome'},
+        { path: '/users', component: Users, name: 'users'},
+        { path: '/users2', component: Father, name: 'users2', meta: {keepAlive: false}},
+        { path: '/users3', component: Fuzujian, name: 'users3', meta: {keepAlive: true}}
+        ] 
+    }
   ]
 })
 
