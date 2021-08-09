@@ -6,7 +6,7 @@
     <Bor></Bor>
   </div> 
 </template>   
-
+ 
 <script>
 import Son from './son.vue'
 import Bor from './borther.vue'
