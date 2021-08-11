@@ -29,7 +29,7 @@ const router = new VueRouter({
     }
   ]
 })
-
+ 
 router.beforeEach((to, from, next) => {
   //to 将要访问的路径
   //from 来自哪个路径
