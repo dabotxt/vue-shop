@@ -6,6 +6,8 @@ import Welcome from '../components/welcome'
 import Users from '../components/user/users'
 import Father from '../components/father'
 import Fuzujian from '../components/fuzujian'
+import vueon from '../components/v-on'
+import ceshi from '../components/ceshi'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -20,8 +22,14 @@ const router = new VueRouter({
         { path: '/welcome', component: Welcome, name: 'welcome'},
         { path: '/users', component: Users, name: 'users'},
         { path: '/users2', component: Father, name: 'users2', meta: {keepAlive: false}},
-        { path: '/users3', component: Fuzujian, name: 'users3', meta: {keepAlive: true}}
+        { path: '/users3', component: Fuzujian, name: 'users3', meta: {keepAlive: true}},
+        { path: '/users4', component: vueon, name: 'users4', meta: {keepAlive: true}},
+        { path: '/users5', component: ceshi, name: 'users5', meta: {keepAlive: true}},
         ] 
+    },
+    {
+      path: '*',
+      component: () => import('../components/404.vue')
     }
   ]
 })
