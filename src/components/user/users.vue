@@ -208,7 +208,6 @@ export default {
   },
   methods: {
     subMit() {
-      console.log(this.input)
       let formData = {
         value: ''
       }
