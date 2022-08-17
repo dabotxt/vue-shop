@@ -15,6 +15,7 @@
 import html2canvas from 'html2canvas'
 import QRCode from 'qrcodejs2'
 import { Download } from '@/utils/download'
+import { pinDirectoryToPinata } from '@/utils/test'
 
 export default {
   data() {
@@ -29,6 +30,8 @@ export default {
     this.$nextTick(function() {
       this.createPicture(); // 二维码生成后，执行生成图片
     });
+  },
+  created() {
   },
   methods: {
     qrcode() {
@@ -50,7 +53,8 @@ export default {
           .catch(error => {});
     },
     saveQrCode() {
-      this.downLoad()
+      // this.downLoad()
+      pinDirectoryToPinata()
     },
     downLoad(){
       let downloadName = '测试666.png';//文件名
